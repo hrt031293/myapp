@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script>
+
+
+
+                 $( document ).ready(function() {
+                   var userob= localStorage.getItem('jwtToken');
+                    console.log("varobj",userob);
+                  if(userob==null || userob==''){
+                    window.location="/";
+                    return false;
+                  }
+                  });
+                // function check(){
+                //      var userob= localStorage.getItem('jwtToken');
+                //      //console.log("varobj",userob);
+                //   if(userob==null || userob==''){
+                //     window.location="/";
+                //     return false;
+                //   }
+                // }
+             </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Profile page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<style>
+    #box-container {
+        margin: 80px;
+        width:400px;
+        border:1px solid #000;
+    }
+    .a{
+        text-align: center;
+    }
+</style>
+</head>
+<body id="box-container" class="a"  >
+<a href="/">logout</a>
+<button type="button" id="btn" onClick="logout()"> LOGOUT </button>
+
+<div >
+<a href="/home">HOME</a>
+    
+        <h1>USER PROFILE</h1>
+
+        name:<span id="uname"></span>
+
+        <br>
+
+        email:<span id="uemail"></span>
+
+    </div>
+
+
+
+    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.17.1/axios.js"></script>  
+    <script src="/javascripts/profile.js"></script> 
+    <script src="/javascripts/contactList.js"></script> 
+</body>
+</html>

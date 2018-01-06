@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>signup</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<style>
+    #box-container {
+        margin: 80px;
+        width:400px;
+        border:1px solid #000;
+    }
+    .a{
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+    
+    <div id="box-container">
+        <div class="a">
+        <h1>SignUp</h1>
+        <div >
+        <input type="text" id="name" placeholder="NAME">
+        <br>
+        <br>
+        <input type="text" id="email" placeholder="EMAIL">
+        <br>
+        <br>
+        <input type="text" id="pass" placeholder="PASSWORD">
+        <br>
+        <br>
+        <input type="text" id="cpass" placeholder="CONFIRM PASSWORD">
+        <br>
+        <br>
+        <button type="button" id="btn" onClick="submituser()"> signup</button>
+    </div>
+    </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.17.1/axios.js"></script>  
+<script src="/javascripts/signup.js"></script>  
+</body>
+</html>

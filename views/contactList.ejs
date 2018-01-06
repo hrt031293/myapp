@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <script>
+                function check(){
+                     var userob= localStorage.getItem('jwtToken');
+                     //console.log("varobj",userob);
+                  if(userob==null || userob==''){
+                    window.location="/";
+                    return false;
+                  }
+                }
+             </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>contact list</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      
+</head>
+<body onload="check();contactList()"   >
+    
+    <h1>Contact App</h1>
+<div class="container">
+
+<input type="text" id="name" placeholder="NAME">
+<input type="text" id="email" placeholder="EMAIL">
+<input type="text" id="num" placeholder="MOBILE">
+<button type="button" id="btn" onClick="saveContact()"> ADD </button>
+<button type="button" id="btn" onClick="profile()"> PROFILE </button>
+<button type="button" id="btn" onClick="logout()"> LOGOUT </button>
+<br>
+<br>
+<br>
+<br>
+<h2> Contact List</h2>
+<table  width = "100%">
+        <thead>
+           <tr>
+              <td><b>NAME</b></td>
+              <td><b>EMAIL</b></td>
+              <td><b>NUMBER</b></td>
+              <td><b>EDIT/UPDATE</b></td>
+              <td><b>DELETE</b></td>
+           </tr>
+        </thead>
+        
+        <tbody id="contactTableBody">
+           <!-- <tr>
+              <td>harshit</td>
+              <td>hrt1993@gmail.com</td>
+              <td>677678888789</td>
+              <td><button class="btn">Edit</button></td>
+           </tr> -->
+        </tbody>
+        
+     </table>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.17.1/axios.js"></script>  
+<script src="/javascripts/contactList.js"></script>  
+</body>
+</html>
